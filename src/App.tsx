@@ -309,7 +309,7 @@ function App() {
           <div className="container mx-auto">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl lg:text-6xl font-black mb-8 leading-tight">
-                Първите <span className="text-yellow-400">5 позиции</span> в Гугъл получават <span className="text-red-500">99%</span> от обажданията.
+                Първите <span className="text-yellow-400">3 позиции</span> в Гугъл получават <span className="text-red-500">99%</span> от обажданията.
               </h2>
 
               <div className="space-y-6 text-xl lg:text-2xl text-gray-300 mb-12">
@@ -322,7 +322,7 @@ function App() {
                 </p>
 
                 <p className="leading-relaxed">
-                  Не се опитвайте да плувате срещу течението, а позиционирайте бизнесът си сред тези <span className="text-yellow-400 font-bold">топ 5 позиции</span> в Гугъл
+                  Не се опитвайте да плувате срещу течението, а позиционирайте бизнеса си сред тези <span className="text-yellow-400 font-bold">топ 3 позиции</span> в Гугъл
                 </p>
               </div>
 
@@ -437,36 +437,103 @@ function App() {
       {!countdown.isClosed && (
         <section className="py-20 px-4 bg-gradient-to-r from-yellow-400/5 to-red-500/5">
           <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-6xl font-black mb-6">
-                Една цена. <span className="text-yellow-400">Всичко включено.</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Без скрити такси, без ограничения. Получавате пълното решение за онлайн видимост
+            {/* Sale banner */}
+            <div
+              className="rounded-3xl px-6 py-8 lg:px-12 lg:py-10 mb-14 text-center"
+              style={{ backgroundColor: '#C20000' }}
+            >
+              <div className="text-3xl lg:text-5xl font-black uppercase tracking-tight mb-3 text-[#FFC400]">
+                ФИНАЛНО НАМАЛЕНИЕ ДО 18.08
+              </div>
+              <p className="text-base lg:text-xl text-white">
+                Затварям за нови клиенти. Дотогава — цени, които няма да се повторят.
               </p>
             </div>
 
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-black border-4 border-yellow-400 rounded-3xl p-8 lg:p-12 relative overflow-hidden hover:scale-105 transition-transform duration-500">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-6xl font-black mb-6">
+                Две неща правят <span className="text-[#FFC400]">разликата</span>
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Google профилът ви прави намираем. Сайтът ви прави избран. Вземете едното, или двете.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-8 lg:gap-6 items-stretch max-w-6xl mx-auto">
+              {/* Card 1 — Google Профил */}
+              <div className="order-2 lg:order-1 flex flex-col bg-black border-2 border-[#FFC400]/25 rounded-3xl p-8 hover:border-[#FFC400]/60 transition-colors duration-300">
                 <div className="text-center mb-8">
-                  <h3 className="text-3xl lg:text-4xl font-bold text-yellow-400 mb-4">Пълен Онлайн Старт</h3>
-                  <div className="text-6xl lg:text-8xl font-black text-white mb-4">
-                    €1287
+                  <h3 className="text-2xl lg:text-3xl font-bold text-[#FFC400] mb-4">Google Профил</h3>
+                  <div className="text-6xl font-black text-white mb-3">€297</div>
+                  <p className="text-gray-400 text-sm">Еднократно. Готово за дни.</p>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  {[
+                    "Пълна оптимизация на Google Business профила",
+                    "Правилна категория, работно време 24/7, зона на обслужване",
+                    "Професионални снимки в профила",
+                    "Система за събиране на отзиви",
+                    "90 дни следене и корекции на позицията"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-6 h-6 text-[#FFC400] flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex items-start space-x-3 mb-8">
+                  <X className="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-500 text-sm">Не включва уебсайт.</span>
+                </div>
+
+                <a
+                  href="tel:0886516012"
+                  className="mt-auto w-full bg-transparent border-2 border-[#FFC400] text-[#FFC400] py-4 rounded-full text-lg font-bold hover:bg-[#FFC400] hover:text-black transition-all duration-300 flex items-center justify-center"
+                >
+                  Искам профила
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
+              </div>
+
+              {/* Card 2 — Профил + Сайт (highlighted) */}
+              <div className="order-1 lg:order-2 relative z-10 flex flex-col bg-black border-4 border-[#FFC400] rounded-3xl p-8 pt-12 lg:-my-6 lg:p-10 lg:pt-14 shadow-2xl shadow-yellow-400/10">
+                <div
+                  className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full text-sm font-bold text-white whitespace-nowrap"
+                  style={{ backgroundColor: '#C20000' }}
+                >
+                  НАМАЛЕНА ЦЕНА
+                </div>
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-[#FFC400] mb-4">Профил + Сайт</h3>
+
+                  <div className="relative inline-block mb-2">
+                    <span className="text-4xl lg:text-5xl font-black text-[#E24B4A]">€1287</span>
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-0 right-0 top-1/2 h-1.5 -translate-y-1/2 rounded-full"
+                      style={{ backgroundColor: '#E24B4A' }}
+                    ></span>
                   </div>
-                  <p className="text-gray-400 text-lg">Еднократна инвестиция за дългосрочни резултати</p>
+
+                  <div className="text-6xl lg:text-7xl font-black text-white mb-3">€697</div>
+                  <p className="text-[#FFC400] text-sm font-semibold mb-1">Спестявате €590</p>
+                  <p className="text-gray-400 text-sm">Или €150 сега и по €50 на всеки 4 седмици</p>
                 </div>
 
                 <div className="space-y-4 mb-8">
                   {[
-                    "Google Business профил оптимизация",
-                    "Модерен, мобилен уебсайт",
+                    "Всичко от „Google Профил“",
+                    "Модерен уебсайт, направен за мобилен телефон",
                     "Промоция в много други канали",
                     "SEO оптимизация за търсачки",
                     "Професионални снимки и текстове",
                     "Достъп до софтуер за намиране на аварии и катастрофи на пътя до вас в България!"
                   ].map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="w-6 h-6 text-yellow-400 flex-shrink-0" />
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-6 h-6 text-[#FFC400] flex-shrink-0 mt-0.5" />
                       <span className="text-gray-300">{feature}</span>
                     </div>
                   ))}
@@ -474,14 +541,55 @@ function App() {
 
                 <a
                   href="tel:0886516012"
-                  className="w-full bg-yellow-400 text-black py-4 rounded-full text-xl font-bold hover:bg-yellow-300 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/25 flex items-center justify-center"
+                  className="mt-auto w-full bg-[#FFC400] text-black py-4 rounded-full text-lg font-bold hover:bg-yellow-300 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 flex items-center justify-center"
                 >
-                  <Phone className="w-6 h-6 mr-2" />
-                  Започнете днес
-                  <ArrowRight className="w-6 h-6 ml-2" />
+                  <Phone className="w-5 h-5 mr-2" />
+                  Искам целия пакет
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
+              </div>
+
+              {/* Card 3 — Уебсайт */}
+              <div className="order-3 flex flex-col bg-black border-2 border-[#FFC400]/25 rounded-3xl p-8 hover:border-[#FFC400]/60 transition-colors duration-300">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-[#FFC400] mb-4">Уебсайт</h3>
+                  <div className="text-6xl font-black text-white mb-3">€497</div>
+                  <p className="text-gray-400 text-sm">Еднократно. За тези с добър профил.</p>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  {[
+                    "Модерен уебсайт, направен за мобилен телефон",
+                    "Бутон за обаждане с един палец",
+                    "Текстове, които Google разбира",
+                    "Професионални снимки",
+                    "Хостинг и домейн настройки"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-6 h-6 text-[#FFC400] flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex items-start space-x-3 mb-8">
+                  <X className="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-500 text-sm">Не включва оптимизация на Google профила.</span>
+                </div>
+
+                <a
+                  href="tel:0886516012"
+                  className="mt-auto w-full bg-transparent border-2 border-[#FFC400] text-[#FFC400] py-4 rounded-full text-lg font-bold hover:bg-[#FFC400] hover:text-black transition-all duration-300 flex items-center justify-center"
+                >
+                  Искам сайта
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </div>
             </div>
+
+            <p className="text-gray-400 text-sm text-center max-w-3xl mx-auto mt-12 lg:mt-16">
+              Гарантирам работата и че продължавам по нея, докато не влезете в топ 3 за вашия град. Не гарантирам колко коли ще се счупят този месец.
+            </p>
           </div>
         </section>
       )}
