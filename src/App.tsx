@@ -520,7 +520,10 @@ function App() {
 
                   <div className="text-6xl lg:text-7xl font-black text-white mb-3">€697</div>
                   <p className="text-[#FFC400] text-sm font-semibold mb-1">Спестявате €590</p>
-                  <p className="text-gray-400 text-sm">Или €150 сега и по €50 на всеки 4 седмици</p>
+                  <div className="mt-4 rounded-2xl border border-[#FFC400] bg-transparent px-4 py-3">
+                    <p className="text-[#FFC400] text-sm font-bold mb-1">ИЛИ НА ВНОСКИ</p>
+                    <p className="text-white text-sm">€150 сега, после по €50 на всеки 4 седмици</p>
+                  </div>
                 </div>
 
                 <div className="space-y-4 mb-8">
@@ -587,7 +590,11 @@ function App() {
               </div>
             </div>
 
-            <p className="text-gray-400 text-sm text-center max-w-3xl mx-auto mt-12 lg:mt-16">
+            <p className="text-white text-base lg:text-lg text-center max-w-3xl mx-auto mt-12 lg:mt-16">
+              Плащането може да се раздели. Кажете ми какво ви е удобно — ще намерим начин.
+            </p>
+
+            <p className="text-gray-400 text-sm text-center max-w-3xl mx-auto mt-4">
               Гарантирам работата и че продължавам по нея, докато не влезете в топ 3 за вашия град. Не гарантирам колко коли ще се счупят този месец.
             </p>
           </div>
