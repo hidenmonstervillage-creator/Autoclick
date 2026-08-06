@@ -12,7 +12,11 @@ import {
   Search,
   Shield,
   X,
-  AlertTriangle
+  AlertTriangle,
+  Store,
+  Smartphone,
+  Landmark,
+  Banknote
 } from 'lucide-react';
 import LastGroupSection from './LastGroupSection';
 
@@ -588,6 +592,31 @@ function App() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </div>
+            </div>
+
+            {/* Payment methods strip */}
+            <div className="max-w-6xl mx-auto mt-12 lg:mt-16 rounded-3xl border border-[#FFC400] bg-black/40 px-6 py-8 lg:px-10 lg:py-10">
+              <p className="text-[#FFC400] text-sm font-bold uppercase tracking-wide text-center mb-6">
+                НАЧИНИ НА ПЛАЩАНЕ
+              </p>
+
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-6 lg:divide-x lg:divide-gray-700">
+                {[
+                  { label: "Изипей", Icon: Store },
+                  { label: "Revolut", Icon: Smartphone },
+                  { label: "Банков превод", Icon: Landmark },
+                  { label: "В брой", Icon: Banknote }
+                ].map(({ label, Icon }) => (
+                  <div key={label} className="flex flex-col items-center justify-center gap-2 px-4">
+                    <Icon className="w-7 h-7 text-[#FFC400]" />
+                    <span className="text-white text-sm text-center">{label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-gray-400 text-sm text-center mt-6">
+                Плащате както ви е удобно — включително в брой на каса на Изипей.
+              </p>
             </div>
 
             <p className="text-white text-base lg:text-lg text-center max-w-3xl mx-auto mt-12 lg:mt-16">
