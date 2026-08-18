@@ -31,7 +31,7 @@ export default function LastGroupSection() {
   const recentEntries = [...clients]
     .filter(d => d.addedAt)
     .sort((a, b) => new Date(b.addedAt!).getTime() - new Date(a.addedAt!).getTime())
-    .slice(0, 3);
+    .slice(0, 4);
 
   const topInquiries = [...inquiries]
     .sort((a, b) => (b.count ?? 1) - (a.count ?? 1))
