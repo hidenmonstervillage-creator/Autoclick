@@ -787,7 +787,6 @@ function App() {
 
             <div className="flex items-center space-x-6 text-gray-400">
               <span>📞 088 651 6012</span>
-              <span>📧 mihaillenkov6@gmail.com</span>
             </div>
           </div>
 

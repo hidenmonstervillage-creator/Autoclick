@@ -3,11 +3,13 @@
   { "id": "karlovo",           "type": "client",  "city": "Карлово",      "coords": [24.8050, 42.6411], "status": "existing", "addedAt": "2026-03-22" },
   { "id": "kazanlak",          "type": "client",  "city": "Казанлък",     "coords": [25.3942, 42.6178], "status": "existing", "addedAt": "2026-04-05" },
   { "id": "pernik",            "type": "client",  "city": "Перник",       "coords": [23.0407, 42.6052], "status": "existing", "addedAt": "2026-04-20" },
+  { "id": "gabrovo",           "type": "client",  "city": "Габрово",      "coords": [25.3167, 42.8742], "status": "existing" },
+  { "id": "varna",             "type": "client",  "city": "Варна",        "coords": [27.9147, 43.2141], "status": "existing" },
+  { "id": "burgas",            "type": "client",  "city": "Бургас",       "coords": [27.4626, 42.5048], "status": "existing" },
+  { "id": "blagoevgrad",       "type": "client",  "city": "Благоевград",  "coords": [23.0994, 42.0116], "status": "existing" },
 
   { "id": "plovdiv-inq",       "type": "inquiry", "city": "Пловдив",      "coords": [24.7453, 42.1354], "count": 5 },
   { "id": "sofia-inq",         "type": "inquiry", "city": "София",        "coords": [23.3219, 42.6977], "count": 3 },
-  { "id": "varna-inq",         "type": "inquiry", "city": "Варна",        "coords": [27.9147, 43.2141], "count": 3 },
-  { "id": "burgas-inq",        "type": "inquiry", "city": "Бургас",       "coords": [27.4626, 42.5048], "count": 2 },
   { "id": "lovech-inq",        "type": "inquiry", "city": "Ловеч",        "coords": [24.7128, 43.1370], "count": 2 },
   { "id": "stara-zagora-inq",  "type": "inquiry", "city": "Стара Загора", "coords": [25.6322, 42.4258], "count": 2 },
   { "id": "targovishte-inq",   "type": "inquiry", "city": "Търговище",   "coords": [26.5717, 43.2470], "count": 1 }
