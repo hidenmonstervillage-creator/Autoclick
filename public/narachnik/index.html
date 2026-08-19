@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>До върха на Google. Сам.</title>
+  <meta property="og:title" content="До върха на Google. Сам." />
+  <meta property="og:description" content="Методът, стъпка по стъпка. Само до полунощ днес." />
+  <meta name="description" content="Методът, стъпка по стъпка. Само до полунощ днес." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0A0A0A;
+      --ink: #EDEDED;
+      --muted: #9a9a9a;
+      --yellow: #FFC400;
+      --red: #C20000;
+      --red-bright: #E24B4A;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      font-family: "Arial Narrow", "Helvetica Neue Condensed", Impact, Arial, sans-serif;
+      font-stretch: condensed;
+      text-transform: uppercase;
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: 0.01em;
+    }
+
+    /* ---------- HERO ---------- */
+    header { padding: 48px 0 40px; text-align: center; }
+
+    .eyebrow {
+      display: inline-block;
+      color: #fff;
+      background: var(--red);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+
+    h1 { font-size: clamp(44px, 12vw, 84px); color: #fff; margin-bottom: 18px; }
+
+    .sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 22px;
+    }
+
+    .priceline { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 26px; }
+    .priceline .now { color: var(--yellow); font-size: 28px; }
+
+    #countdown {
+      font-family: "Courier New", monospace;
+      font-size: clamp(40px, 11vw, 64px);
+      font-weight: 900;
+      color: var(--red-bright);
+      letter-spacing: 0.04em;
+      margin-bottom: 30px;
+    }
+
+    /* ---------- CTA ---------- */
+    .cta { text-align: center; padding: 8px 0 6px; }
+
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto 14px;
+      padding: 18px 24px;
+      border-radius: 999px;
+      font-size: 19px;
+      font-weight: 800;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-solid { background: var(--yellow); color: #111; }
+    .btn-outline { background: transparent; color: var(--yellow); border: 3px solid var(--yellow); }
+
+    .paynote { font-size: 13px; color: var(--muted); max-width: 420px; margin: 4px auto 0; }
+
+    /* ---------- SECTIONS ---------- */
+    section { padding: 44px 0; }
+    section h2 { font-size: clamp(30px, 8vw, 46px); color: #fff; margin-bottom: 20px; }
+    section p { font-size: 17px; color: var(--ink); margin-bottom: 14px; }
+    section p:last-child { margin-bottom: 0; }
+
+    /* ---------- OBITUARY (МИЗЕРИЯТА) ---------- */
+    .obituary {
+      background: #f5f2ec;
+      color: #111;
+      border: 4px solid #111;
+      outline: 1px solid #111;
+      outline-offset: 4px;
+      padding: 34px 26px;
+      margin: 10px 2px;
+      font-family: Georgia, "Times New Roman", serif;
+      text-align: center;
+    }
+    .obituary .cross { font-size: 26px; color: #111; margin-bottom: 12px; }
+    .obituary h2 {
+      color: #111;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      font-stretch: normal;
+      font-size: clamp(26px, 7vw, 38px);
+    }
+    .obituary p { color: #222; font-size: 17px; }
+
+    /* ---------- CHECKLIST ---------- */
+    .checklist { list-style: none; }
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+    .checklist .tick {
+      flex-shrink: 0;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: #111;
+      font-weight: 900;
+      font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* ---------- ОФЕРТАТА ---------- */
+    .offer {
+      border: 3px solid var(--yellow);
+      border-radius: 20px;
+      padding: 30px 24px;
+      text-align: center;
+    }
+    .offer .big { font-size: 34px; font-weight: 900; color: #fff; }
+
+    /* ---------- CLOSED STATE ---------- */
+    #closed { text-align: center; padding: 30px 0 60px; }
+    #closed h2 { color: var(--red-bright); font-size: clamp(30px, 9vw, 48px); margin-bottom: 20px; }
+    #closed p { font-size: 18px; color: var(--ink); margin-bottom: 12px; }
+
+    footer { padding: 30px 0 40px; text-align: center; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <header>
+      <div class="eyebrow" id="eyebrow">ВТОРИ И ПОСЛЕДЕН ПРОЗОРЕЦ — ДО ПОЛУНОЩ ДНЕС</div>
+      <h1>ДО ВЪРХА НА GOOGLE. САМ.</h1>
+
+      <div id="sale-hero">
+        <p class="sub">Методът, с който качвам пътни помощи на първите места — стъпка по стъпка, с чеклист. За тия, дето ще си запретнат ръкавите.</p>
+        <p class="priceline">Част от пакета за €597. Днес: <span class="now">€67</span>.</p>
+        <div id="countdown">--:--:--</div>
+        <div class="cta" data-cta></div>
+      </div>
+    </header>
+
+    <main id="sale">
+
+      <section>
+        <div class="obituary">
+          <div class="cross">&#10013;</div>
+          <h2>4:47 СУТРИНТА.</h2>
+          <p>Някой закъсва на пътя до твоя град. Студено му е, ядосан е, бърза.</p>
+          <p>Вади телефона. Не пише във Facebook. Не пита приятел. Пише в Google: „пътна помощ“.</p>
+          <p>Излизат три имена. Твоето не е между тях.</p>
+          <p>Той звъни на първото. Оня става, пали камиона, взима парите.</p>
+          <p>Ти спиш. И парите ти спят при него.</p>
+          <p>Така всяка нощ. Не защото си лош майстор.</p>
+          <p>Защото те няма.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>ЗНАЕШ КАК ПРОДЪЛЖАВА.</h2>
+        <p>Гледал си го у колеги.</p>
+        <p>Първо телефонът звъни по-рядко. После спира.</p>
+        <p>После камионът стои по цяла седмица пред гаража.</p>
+        <p>После идва обявата в OLX: „Продавам репатрак, реални километри, по договаряне.“</p>
+        <p>А накрая — некрологът на бизнеса. Оня, дето никой не го чете.</p>
+        <p>Щото никой не го намираше и приживе.</p>
+      </section>
+
+      <section>
+        <h2>И ПРЕЗ ЦЯЛОТО ВРЕМЕ СИ ПОВТАРЯШ:</h2>
+        <p>„Сезонът е слаб.“ „Хората нямат пари.“ „Градът е малък.“</p>
+        <p>Истината е по-проста и по-грозна:</p>
+        <p>Работа има. Тя просто звъни на другиго.</p>
+      </section>
+
+      <section>
+        <h2>ОТ ПОЛУНОЩ НЕ ПРИЕМАМ КЛИЕНТИ.</h2>
+        <p>До вчера това го оправях аз — срещу €597. Затворих.</p>
+        <p>Остават два пътя:</p>
+        <p>Да чакаш някой да те спаси. Виж горе какво става с чакащите.</p>
+        <p>Или да си го направиш сам — с моите стъпки, по моя ред.</p>
+        <p>Наръчникът е вторият път.</p>
+        <div class="cta" data-cta></div>
+      </section>
+
+      <section>
+        <h2>ВЪТРЕ Е ВСИЧКО, КОЕТО ПРАВЯ ЗА КЛИЕНТИ:</h2>
+        <ul class="checklist">
+          <li><span class="tick">&#10003;</span>Как Google решава кого да покаже — и защо не е тоя с най-новия камион</li>
+          <li><span class="tick">&#10003;</span>Правилната категория и име — грешката, дето скрива половината бранш</li>
+          <li><span class="tick">&#10003;</span>Работно време 24/7 — една настройка, която връща нощните обаждания</li>
+          <li><span class="tick">&#10003;</span>Снимките, които Google брои — и тия, дето само заемат място</li>
+          <li><span class="tick">&#10003;</span>Системата за ревюта — как се събират, без да просиш</li>
+          <li><span class="tick">&#10003;</span>Зона на обслужване — да те намират и от съседните градове</li>
+          <li><span class="tick">&#10003;</span>Чеклист — минаваш го веднъж месечно и държиш позицията</li>
+        </ul>
+        <div class="cta" data-cta></div>
+      </section>
+
+      <section>
+        <p>Няма да те лъжа: не е магия и не става за една нощ.</p>
+        <p>Това е работа. Същата, която вършех за клиенти — просто ще я свършиш ти.</p>
+        <p>Който мине стъпките докрай, Google го вижда.</p>
+        <p>Който чака — върни се на 4:47 сутринта и прочети пак.</p>
+      </section>
+
+      <section>
+        <div class="offer">
+          <p class="big">€67. Еднократно.</p>
+          <p>Утре (четвъртък) го пращам лично на всеки поръчал.</p>
+          <p>Защо €67, като е част от пакет за €597? Защото затворих. Нямам какво да пазя вече — освен думата си:</p>
+          <p><strong>В полунощ тоя прозорец се затваря. Завинаги.</strong></p>
+          <div class="cta" data-cta></div>
+        </div>
+      </section>
+
+    </main>
+
+    <div id="closed" hidden>
+      <h2>ПРОЗОРЕЦЪТ СЕ ЗАТВОРИ В ПОЛУНОЩ.</h2>
+      <p>Казах — и стана.</p>
+      <p>Наръчникът ще се върне. Под друго име. На друга цена.</p>
+      <p>Ако искаш да разбереш пръв — пиши ми „СПИСЪК“.</p>
+      <div class="cta">
+        <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „СПИСЪК“ &rarr;</a>
+        <a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>
+      </div>
+    </div>
+
+    <footer>AutoClick &middot; 088 651 6012</footer>
+
+  </div>
+
+  <script>
+    const DEADLINE = new Date('2026-08-19T23:59:59+03:00');
+
+    // Fill every CTA slot from one source of truth
+    const CTA_HTML =
+      '<a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>' +
+      '<a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>' +
+      '<p class="paynote">Плащане: Изипей &middot; Revolut &middot; банков превод. Пращам наръчника лично утре (четвъртък).</p>';
+    document.querySelectorAll('[data-cta]').forEach(el => { el.innerHTML = CTA_HTML; });
+
+    const pad = n => String(n).padStart(2, '0');
+    let timer = null;
+
+    function close() {
+      // Remove the entire sales path from the DOM: offer, price, buy CTAs, countdown, eyebrow.
+      const sale = document.getElementById('sale');
+      const saleHero = document.getElementById('sale-hero');
+      const eyebrow = document.getElementById('eyebrow');
+      if (sale) sale.remove();
+      if (saleHero) saleHero.remove();
+      if (eyebrow) eyebrow.remove();
+      document.getElementById('closed').hidden = false;
+      if (timer) clearInterval(timer);
+    }
+
+    function tick() {
+      // Absolute-time comparison: same state for every visitor worldwide at the same instant.
+      const ms = DEADLINE.getTime() - Date.now();
+      if (ms <= 0) { close(); return; }
+      const h = Math.floor(ms / 3600000);
+      const m = Math.floor((ms % 3600000) / 60000);
+      const s = Math.floor((ms % 60000) / 1000);
+      document.getElementById('countdown').textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
+    }
+
+    if (Date.now() >= DEADLINE.getTime()) {
+      close();
+    } else {
+      tick();
+      timer = setInterval(tick, 1000);
+    }
+  </script>
+
+</body>
+</html>
