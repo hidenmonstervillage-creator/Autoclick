@@ -9,6 +9,7 @@
   <meta name="description" content="Методът, стъпка по стъпка. Само до полунощ днес." />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    [hidden] { display: none !important; }
 
     :root {
       --bg: #0A0A0A;
@@ -101,6 +102,18 @@
 
     .paynote { font-size: 13px; color: var(--muted); max-width: 420px; margin: 4px auto 0; }
 
+    /* ---------- STICKY MOBILE CTA ---------- */
+    .stickybar {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 50;
+      background: rgba(10, 10, 10, 0.96);
+      border-top: 1px solid #222;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    }
+    .stickybar .btn { margin: 0; font-size: 17px; padding: 16px 20px; }
+    @media (min-width: 768px) { .stickybar { display: none !important; } }
+
     /* ---------- SECTIONS ---------- */
     section { padding: 44px 0; }
     section h2 { font-size: clamp(30px, 8vw, 46px); color: #fff; margin-bottom: 20px; }
@@ -150,6 +163,27 @@
     .tally p { font-size: 17px; color: var(--ink); }
     .tally .num { font-family: "Courier New", monospace; font-weight: 700; color: #fff; }
 
+    /* ---------- PROOF (ДОКАЗАТЕЛСТВОТО) ---------- */
+    .proof {
+      border: 1px solid #2a2a2a;
+      border-left: 4px solid var(--yellow);
+      border-radius: 6px;
+      padding: 24px 22px;
+      background: #111;
+    }
+    .proof .queries { margin: 16px 0 18px; }
+    .proof .query {
+      display: block;
+      font-family: "Courier New", monospace;
+      font-size: 16px;
+      color: #fff;
+      background: #0A0A0A;
+      border: 1px solid #2a2a2a;
+      border-radius: 4px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+    }
+
     /* ---------- CHECKLIST ---------- */
     .checklist { list-style: none; }
     .checklist li {
@@ -171,6 +205,23 @@
       margin-top: 1px;
     }
 
+    /* ---------- NOT FOR YOU (ЗА КОГО НЕ Е) ---------- */
+    .notfor h2 {
+      font-size: clamp(24px, 6vw, 32px);
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .notfor p { color: var(--muted); font-size: 16px; margin-bottom: 10px; }
+
+    /* ---------- GUARANTEE (ГАРАНЦИЯТА) ---------- */
+    .guarantee {
+      border: 3px solid #fff;
+      border-radius: 20px;
+      padding: 30px 24px;
+      text-align: center;
+    }
+    .guarantee h2 { font-size: clamp(26px, 7vw, 38px); margin-bottom: 18px; }
+
     /* ---------- ОФЕРТАТА ---------- */
     .offer {
       border: 3px solid var(--yellow);
@@ -186,6 +237,9 @@
     #closed p { font-size: 18px; color: var(--ink); margin-bottom: 12px; }
 
     footer { padding: 30px 0 40px; text-align: center; font-size: 13px; color: var(--muted); }
+
+    /* Keep the footer clear of the sticky bar. Must follow the footer rule above to win. */
+    @media (max-width: 767px) { footer { padding-bottom: 110px; } }
   </style>
 </head>
 <body>
@@ -200,7 +254,11 @@
         <p class="sub">Методът, с който качвам пътни помощи на първите места — стъпка по стъпка, с чеклист. За тия, дето ще си запретнат ръкавите.</p>
         <p class="priceline">Част от пакета за €597. Днес: <span class="now">€67</span>.</p>
         <div id="countdown">--:--:--</div>
-        <div class="cta" data-cta></div>
+        <div class="cta" data-cta>
+          <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>
+          <a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>
+          <p class="paynote">Плащане: Изипей &middot; Revolut &middot; банков превод. Получаваш го до един час, лично от мен.</p>
+        </div>
       </div>
     </header>
 
@@ -250,10 +308,25 @@
       <section>
         <h2>ЕДНА ЧЕСТНА СМЕТКА.</h2>
         <div class="tally">
-          <p>Тия дни говорих с хора от голям град. Плащат по <span class="num">€150</span> на ден реклама, само да се задържат отгоре. <span class="num">€150</span>. На ден. Спрат ли — изчезват до два дни.</p>
+          <p>Тия дни говорих с колеги от Пловдив. Плащат по <span class="num">€150</span> на ден реклама, само да се задържат отгоре. <span class="num">€150</span>. На ден. Спрат ли — изчезват до два дни.</p>
           <p>Ти нямаш <span class="num">€150</span> на ден. Знам.</p>
           <p>Затова ти давам другото: <span class="num">€67</span> еднократно и позиция, която не се изключва в момента, в който спреш да плащаш.</p>
           <p>Едно вдигнато обаждане в 4 сутринта ти връща парите. Едно.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>НЕ МИ ВЯРВАЙ. ПРОВЕРИ.</h2>
+        <div class="proof">
+          <p>Не искам да ми вярваш на думите. Извади телефона и пиши в Google:</p>
+          <div class="queries">
+            <span class="query">„пътна помощ Казанлък“</span>
+            <span class="query">„пътна помощ Габрово“</span>
+            <span class="query">„пътна помощ Карлово“</span>
+          </div>
+          <p>Виж кой излиза горе. Тия профили съм ги правил аз.</p>
+          <p>Не са по-големи фирми от твоята. Просто са направени както трябва.</p>
+          <p>Точно това пише вътре.</p>
         </div>
       </section>
 
@@ -264,7 +337,11 @@
         <p>Да чакаш някой да те спаси. Виж горе какво става с чакащите.</p>
         <p>Или да си го направиш сам — с моите стъпки, по моя ред.</p>
         <p>Наръчникът е вторият път.</p>
-        <div class="cta" data-cta></div>
+        <div class="cta" data-cta>
+          <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>
+          <a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>
+          <p class="paynote">Плащане: Изипей &middot; Revolut &middot; банков превод. Получаваш го до един час, лично от мен.</p>
+        </div>
       </section>
 
       <section>
@@ -278,7 +355,19 @@
           <li><span class="tick">&#10003;</span>Зона на обслужване — да те намират и от съседните градове</li>
           <li><span class="tick">&#10003;</span>Чеклист — минаваш го веднъж месечно и държиш позицията</li>
         </ul>
-        <div class="cta" data-cta></div>
+        <div class="cta" data-cta>
+          <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>
+          <a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>
+          <p class="paynote">Плащане: Изипей &middot; Revolut &middot; банков превод. Получаваш го до един час, лично от мен.</p>
+        </div>
+      </section>
+
+      <section class="notfor">
+        <h2>НЕ ГО КУПУВАЙ, АКО:</h2>
+        <p>— чакаш да стане само, без да пипнеш нищо</p>
+        <p>— искаш утре да си пръв, а днес нямаш дори профил</p>
+        <p>— търсиш номер, с който да преметнеш Google. Няма такъв. Има работа.</p>
+        <p>Ако си от тия — спести си €67 и не ми пиши. Сериозно.</p>
       </section>
 
       <section>
@@ -286,15 +375,29 @@
         <p>Това е работа. Същата, която вършех за клиенти — просто ще я свършиш ти.</p>
         <p>Който мине стъпките докрай, Google го вижда.</p>
         <p>Който чака — върни се на 4:47 сутринта и прочети пак.</p>
+        <p>И да ти го кажа направо, щото знам к'во си мислиш: не ти трябва да разбираш от компютри. Ако можеш да пишеш в Google, можеш да го направиш. Няма код, няма сайт, няма реклама. Телефон и половин ден.</p>
+      </section>
+
+      <section>
+        <div class="guarantee">
+          <h2>РИСКЪТ Е МОЙ, НЕ ТВОЙ.</h2>
+          <p>Мини стъпките. Дай им 30 дни.</p>
+          <p>Ако нищо не се е случило — пишеш ми и ти връщам €67. Без обяснения, без разпит.</p>
+          <p>Мога да си го позволя, щото знам к'во съм написал вътре.</p>
+        </div>
       </section>
 
       <section>
         <div class="offer">
           <p class="big">€67. Еднократно.</p>
-          <p>Пращам го лично, до 48 часа след поръчката.</p>
+          <p>PDF, седем стъпки, плюс чеклиста за всеки месец. Готов е. Пращам ти го до един час, не утре.</p>
           <p>Защо толкова евтино, като е част от пакет за €597? Защото затворих. Нямам какво да пазя вече — освен думата си:</p>
           <p><strong>В полунощ вратата се затваря.</strong></p>
-          <div class="cta" data-cta></div>
+          <div class="cta" data-cta>
+            <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>
+            <a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>
+            <p class="paynote">Плащане: Изипей &middot; Revolut &middot; банков превод. Получаваш го до един час, лично от мен.</p>
+          </div>
         </div>
       </section>
 
@@ -315,27 +418,24 @@
 
   </div>
 
+  <!-- Sticky mobile CTA: revealed by script past the hero, removed after DEADLINE. -->
+  <div class="stickybar" id="stickybar" hidden>
+    <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>
+  </div>
+
   <script>
     const DEADLINE = new Date('2026-08-21T23:59:59+03:00');
-
-    // Fill every CTA slot from one source of truth
-    const CTA_HTML =
-      '<a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>' +
-      '<a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>' +
-      '<p class="paynote">Плащане: Изипей &middot; Revolut &middot; банков превод. Пращам го лично, до 48 часа.</p>';
-    document.querySelectorAll('[data-cta]').forEach(el => { el.innerHTML = CTA_HTML; });
 
     const pad = n => String(n).padStart(2, '0');
     let timer = null;
 
     function close() {
-      // Remove the entire sales path from the DOM: offer, price, buy CTAs, countdown, eyebrow.
-      const sale = document.getElementById('sale');
-      const saleHero = document.getElementById('sale-hero');
-      const eyebrow = document.getElementById('eyebrow');
-      if (sale) sale.remove();
-      if (saleHero) saleHero.remove();
-      if (eyebrow) eyebrow.remove();
+      // Strip the whole sales path from the DOM: offer, price, every buy CTA, countdown, eyebrow.
+      ['sale', 'sale-hero', 'eyebrow', 'stickybar'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.remove();
+      });
+      document.querySelectorAll('[data-cta]').forEach(el => el.remove());
       document.getElementById('closed').hidden = false;
       if (timer) clearInterval(timer);
     }
@@ -347,7 +447,15 @@
       const h = Math.floor(ms / 3600000);
       const m = Math.floor((ms % 3600000) / 60000);
       const s = Math.floor((ms % 60000) / 1000);
-      document.getElementById('countdown').textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
+      const cd = document.getElementById('countdown');
+      if (cd) cd.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
+    }
+
+    function onScroll() {
+      const bar = document.getElementById('stickybar');
+      if (!bar) return;
+      const hero = document.querySelector('header');
+      bar.hidden = !(hero && window.scrollY > hero.offsetHeight);
     }
 
     if (Date.now() >= DEADLINE.getTime()) {
@@ -355,6 +463,8 @@
     } else {
       tick();
       timer = setInterval(tick, 1000);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
     }
   </script>
 
