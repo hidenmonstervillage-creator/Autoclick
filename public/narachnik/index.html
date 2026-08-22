@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>До върха на Google. Сам.</title>
-  <meta property="og:title" content="До върха на Google. Сам." />
+  <title>Излизай на първите три места в Google. Сам.</title>
+  <meta property="og:title" content="Излизай на първите три места в Google. Сам." />
   <meta property="og:description" content="Методът, стъпка по стъпка. Само до полунощ днес." />
   <meta name="description" content="Методът, стъпка по стъпка. Само до полунощ днес." />
   <style>
@@ -59,7 +59,7 @@
       margin-bottom: 24px;
     }
 
-    h1 { font-size: clamp(44px, 12vw, 84px); color: #fff; margin-bottom: 18px; }
+    h1 { font-size: clamp(38px, 10vw, 72px); color: #fff; margin-bottom: 18px; }
 
     .sub {
       font-size: 18px;
@@ -68,8 +68,8 @@
       margin: 0 auto 22px;
     }
 
-    .priceline { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 26px; }
-    .priceline .now { color: var(--yellow); font-size: 28px; }
+    .priceline { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 26px; }
+    .priceline .now { color: var(--yellow); font-size: 26px; }
 
     #countdown {
       font-family: "Courier New", monospace;
@@ -98,9 +98,14 @@
     }
 
     .btn-solid { background: var(--yellow); color: #111; }
-    .btn-outline { background: transparent; color: var(--yellow); border: 3px solid var(--yellow); }
+    .btn-outline {
+      background: transparent;
+      color: var(--yellow);
+      border: 3px solid var(--yellow);
+      font-size: 16px;
+    }
 
-    .paynote { font-size: 13px; color: var(--muted); max-width: 420px; margin: 4px auto 0; }
+    .paynote { font-size: 13px; color: var(--muted); max-width: 420px; margin: 6px auto 0; }
 
     /* ---------- STICKY MOBILE CTA ---------- */
     .stickybar {
@@ -120,29 +125,24 @@
     section p { font-size: 17px; color: var(--ink); margin-bottom: 14px; }
     section p:last-child { margin-bottom: 0; }
 
-    /* ---------- OBITUARY (МИЗЕРИЯТА) ---------- */
-    .obituary {
-      background: #f5f2ec;
-      color: #111;
-      border: 4px solid #111;
-      outline: 1px solid #111;
-      outline-offset: 4px;
-      padding: 34px 26px;
-      margin: 10px 2px;
-      font-family: Georgia, "Times New Roman", serif;
+    /* ---------- OLX SCREENSHOT ---------- */
+    .olx-shot {
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      margin: 26px auto 10px;
+      border: 1px solid #333;
+      border-radius: 8px;
+    }
+    .olx-caption {
       text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 0;
     }
-    .obituary .cross { font-size: 26px; color: #111; margin-bottom: 12px; }
-    .obituary h2 {
-      color: #111;
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 700;
-      font-stretch: normal;
-      font-size: clamp(26px, 7vw, 38px);
-    }
-    .obituary p { color: #222; font-size: 17px; }
 
-    /* ---------- TWIN CARD (ДРУГАТА 4:47) — the obituary, inverted ---------- */
+    /* ---------- TWIN CARD (ДРУГАТА 4:47) ---------- */
     .twin {
       background: #0d0d0d;
       border: 3px solid var(--yellow);
@@ -247,7 +247,7 @@
       color: var(--muted);
       margin-bottom: 16px;
     }
-    .notfor p { color: var(--muted); font-size: 16px; margin-bottom: 10px; }
+    .notfor p { color: #F2F2F2; font-size: 16px; margin-bottom: 10px; }
 
     /* ---------- FAQ (ЗНАМ КАКВО ЩЕ МИ КАЖЕШ) ---------- */
     .faq .q {
@@ -271,6 +271,17 @@
       text-align: center;
     }
     .guarantee h2 { font-size: clamp(26px, 7vw, 38px); margin-bottom: 18px; }
+
+    /* ---------- BONUS (БОНУСЪТ) ---------- */
+    .bonus {
+      border: 1px solid #2a2a2a;
+      border-left: 4px solid var(--yellow);
+      border-radius: 6px;
+      padding: 22px 20px;
+      background: #111;
+    }
+    .bonus h2 { font-size: clamp(22px, 5.5vw, 28px); margin-bottom: 14px; }
+    .bonus p { font-size: 16px; }
 
     /* ---------- ОФЕРТАТА ---------- */
     .offer {
@@ -298,16 +309,16 @@
 
     <header>
       <div class="eyebrow" id="eyebrow">ЗА ТЕБ, АКО ИМАШ ПЪТНА ПОМОЩ — ДО ПОЛУНОЩ ДНЕС</div>
-      <h1>ДО ВЪРХА НА GOOGLE. САМ.</h1>
+      <h1>ИЗЛИЗАЙ НА ПЪРВИТЕ ТРИ МЕСТА В GOOGLE. САМ.</h1>
 
       <div id="sale-hero">
         <p class="sub">Методът, с който качвам пътни помощи на първите места — стъпка по стъпка, с чеклист. За тия, дето ще си запретнат ръкавите.</p>
-        <p class="priceline">Част от пакета за €597. Днес: <span class="now">€67</span>.</p>
+        <p class="priceline">Услугата, която вършех за €597 — днес събрана в наръчник. Само <span class="now">€67</span>.</p>
         <div id="countdown">--:--:--</div>
         <div class="cta" data-cta>
-          <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>
-          <a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>
-          <p class="paynote">Плащане: Изипей &middot; Revolut &middot; банков превод. Получаваш го до един час, лично от мен.</p>
+          <a class="btn btn-solid" href="https://buy.stripe.com/aFabJ38bu6QAbQM9Br1oI07">ПЛАТИ С КАРТА — €67 &rarr;</a>
+          <a class="btn btn-outline" href="viber://chat?number=%2B359886516012">ДРУГ НАЧИН НА ПЛАЩАНЕ? ПИШИ МИ &rarr;</a>
+          <p class="paynote">С карта — през бутона, веднага. Изипей &middot; Revolut &middot; банков превод — пиши ми на Viber. Наръчникът идва лично от мен, на Viber, до един час.</p>
         </div>
       </div>
     </header>
@@ -315,21 +326,18 @@
     <main id="sale">
 
       <section>
-        <div class="obituary">
-          <div class="cross">&#10013;</div>
-          <h2>4:47 СУТРИНТА.</h2>
-          <p>Някой закъсва на пътя до твоя град. Студено му е, ядосан е, бърза.</p>
-          <p>Вади телефона. Не пише във Facebook. Не пита приятел. Пише в Google: „пътна помощ“.</p>
-          <p>Излизат три имена. Твоето не е между тях.</p>
-          <p>Той звъни на първото. Оня става, пали камиона, взима парите.</p>
-          <p>Ти спиш. И парите ти спят при него.</p>
-          <p>Утре пак ще стане 4:47. И пак няма да те има.</p>
-          <p>Не защото си лош майстор. Защото те няма.</p>
-        </div>
+        <h2>ПРЕДСТАВИ СИ, ЧЕ Е 4:47 СУТРИНТА.</h2>
+        <p>Някой закъсва на пътя до твоя град. Студено му е, ядосан е, бърза.</p>
+        <p>Вади телефона. Не пише във Facebook. Не пита приятел. Пише в Google: „пътна помощ“.</p>
+        <p>Излизат три имена. Твоето не е между тях.</p>
+        <p>Той звъни на първото. Оня става, пали камиона, взима парите.</p>
+        <p>Ти спиш. И парите ти спят при него.</p>
+        <p>Утре пак ще стане 4:47. И пак няма да те има.</p>
+        <p>Не защото си по-зле. Защото те няма.</p>
       </section>
 
       <section>
-        <h2>ДВА КАМИОНА. ЕДНАКВИ.</h2>
+        <h2>ДВЕ ЕДНАКВИ ПЪТНИ ПОМОЩИ</h2>
         <p>Знаеш такива двама. Единият яде. Другият пости.</p>
         <p>Не е камионът — и двата палят. Не е градът — един и същ е. Не е майсторлъкът — и двамата вадят кола от канавката с една ръка.</p>
         <p>Разликата е една: единия го пише в Google. Другия го няма.</p>
@@ -345,6 +353,8 @@
         <p>После цената в обявата пада два пъти.</p>
         <p>А накрая — некрологът на бизнеса. Оня, дето никой не го чете.</p>
         <p>Щото никой не го намираше и приживе.</p>
+        <img class="olx-shot" src="/narachnik/olx-ad.jpg" loading="lazy" alt="Обява в OLX: Продавам пътна помощ — колкото дадете" />
+        <p class="olx-caption">Позната обява?</p>
       </section>
 
       <section>
@@ -371,26 +381,27 @@
           <p>Не искам да ми вярваш на думите. Извади телефона и пиши в Google:</p>
           <div class="queries">
             <span class="query">„пътна помощ Казанлък“</span>
-            <span class="query">„пътна помощ Габрово“</span>
+            <span class="query">„пътна помощ Перник“</span>
             <span class="query">„пътна помощ Карлово“</span>
           </div>
-          <p>Виж кой излиза горе. Тия профили съм ги правил аз.</p>
+          <p>Виж кой излиза горе. Тия профили съм ги правил аз. И не само там.</p>
           <p>Не са по-големи фирми от твоята. Просто са направени както трябва.</p>
           <p>Точно това пише вътре.</p>
         </div>
       </section>
 
       <section>
-        <h2>ОТ 18-И НЕ ПРИЕМАМ КЛИЕНТИ.</h2>
-        <p>До 18-и това го оправях аз — срещу €597. Затворих. Не се пошегувах.</p>
+        <h2>ВЕЧЕ НЕ ПРИЕМАМ КЛИЕНТИ.</h2>
+        <p>На 18-и затворих AutoClick за нови клиенти. Казах го публично, с дата — и го спазих. Които влязоха, влязоха.</p>
+        <p>Дотогава това го оправях аз — срещу €597. Тая врата вече я няма.</p>
         <p>Остават два пътя:</p>
         <p>Да чакаш някой да те спаси. Виж горе какво става с чакащите.</p>
         <p>Или да си го направиш сам — с моите стъпки, по моя ред.</p>
         <p>Наръчникът е вторият път.</p>
         <div class="cta" data-cta>
-          <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>
-          <a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>
-          <p class="paynote">Плащане: Изипей &middot; Revolut &middot; банков превод. Получаваш го до един час, лично от мен.</p>
+          <a class="btn btn-solid" href="https://buy.stripe.com/aFabJ38bu6QAbQM9Br1oI07">ПЛАТИ С КАРТА — €67 &rarr;</a>
+          <a class="btn btn-outline" href="viber://chat?number=%2B359886516012">ДРУГ НАЧИН НА ПЛАЩАНЕ? ПИШИ МИ &rarr;</a>
+          <p class="paynote">С карта — през бутона, веднага. Изипей &middot; Revolut &middot; банков превод — пиши ми на Viber. Наръчникът идва лично от мен, на Viber, до един час.</p>
         </div>
       </section>
 
@@ -473,18 +484,19 @@
 
       <section>
         <div class="twin">
-          <h2>А СЕГА ДРУГАТА 4:47.</h2>
-          <p>Същата нощ. Същият студ. Същият човек на пътя пише „пътна помощ“.</p>
-          <p>Три имена. Първото е твоето.</p>
-          <p>Телефонът ти светва. Ставаш, палиш камиона, взимаш парите.</p>
-          <p>Другите двама спят. Техните пари са при теб.</p>
+          <h2>А СЕГА СИ ПРЕДСТАВИ ДРУГАТА 4:47.</h2>
+          <p>Същата нощ. Същият студ. Същият човек трепери на пътя и пише в Google: „пътна помощ“.</p>
+          <p>Излизат три имена. Първото е твоето.</p>
+          <p>Телефонът ти светва в тъмното. Ставаш, палиш камиона, тръгваш.</p>
+          <p>Час по-късно човекът ти стиска ръката, снимката на камиона ти вече е в телефона му, а парите му — в твоя джоб.</p>
+          <p>Другите двама? Спят. И утре пак ще спят.</p>
           <p>Това не е късмет. Настройка е.</p>
           <p>Седем стъпки те делят от нея.</p>
         </div>
         <div class="cta" data-cta>
-          <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>
-          <a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>
-          <p class="paynote">Плащане: Изипей &middot; Revolut &middot; банков превод. Получаваш го до един час, лично от мен.</p>
+          <a class="btn btn-solid" href="https://buy.stripe.com/aFabJ38bu6QAbQM9Br1oI07">ПЛАТИ С КАРТА — €67 &rarr;</a>
+          <a class="btn btn-outline" href="viber://chat?number=%2B359886516012">ДРУГ НАЧИН НА ПЛАЩАНЕ? ПИШИ МИ &rarr;</a>
+          <p class="paynote">С карта — през бутона, веднага. Изипей &middot; Revolut &middot; банков превод — пиши ми на Viber. Наръчникът идва лично от мен, на Viber, до един час.</p>
         </div>
       </section>
 
@@ -500,7 +512,7 @@
         <h2>ЗНАМ КАКВО ЩЕ МИ КАЖЕШ.</h2>
 
         <p class="q">„Нямам време.“</p>
-        <p class="a">Половин ден, веднъж. Колко часа на седмица стоиш до телефон, дето мълчи?</p>
+        <p class="a">Целият метод изисква 2 часа, веднъж. Колко часа на седмица стоиш до телефон, дето мълчи?</p>
 
         <p class="q">„Не разбирам от компютри.“</p>
         <p class="a">Ако можеш да пишеш в Google, можеш и това. Телефонът ти стига. Няма код, няма сайт.</p>
@@ -509,10 +521,10 @@
         <p class="a">Рекламата умира в секундата, в която спреш да плащаш. Профилът стои. Затова е €67 веднъж, а не €150 на ден.</p>
 
         <p class="q">„Ти нали затвори? Защо продаваш?“</p>
-        <p class="a">Затворих услугата за €597. Знанието не съм длъжен да го погреба с нея. И не ми вярвай на думи — виж Казанлък.</p>
+        <p class="a">Затворих услугата за €597. Знанието не съм длъжен да го погреба с нея. И не ми вярвай на думи — виж примерите горе.</p>
 
-        <p class="q">„Ще го взема идната седмица.“</p>
-        <p class="a">Няма идната седмица. В полунощ линкът умира. Нарочно.</p>
+        <p class="q">„Ще го взема другата седмица.“</p>
+        <p class="a">Няма я другата седмица. В полунощ линкът умира. Нарочно — първо, щото „после“ е там, дето умират всички добри намерения. И второ: кажа ли срок, го спазвам. На 18-и го доказах.</p>
 
         <p class="q">„€67 са много.“</p>
         <p class="a">Едно нощно обаждане ти ги връща. Ако и това е много — прочети пак „НЕ ГО КУПУВАЙ, АКО“.</p>
@@ -522,28 +534,39 @@
         <p>Няма да те лъжа: не е магия и не става за една нощ.</p>
         <p>Това е работа. Същата, която вършех за клиенти — просто ще я свършиш ти.</p>
         <p>Който мине стъпките докрай, Google го вижда.</p>
-        <p>Който чака — върни се на 4:47 сутринта и прочети пак.</p>
+        <p>Който чака — знае какво го чака в 4:47.</p>
       </section>
 
       <section>
         <div class="guarantee">
           <h2>РИСКЪТ Е МОЙ, НЕ ТВОЙ.</h2>
           <p>Мини стъпките. Дай им 30 дни.</p>
-          <p>Ако нищо не се е случило — пишеш ми и ти връщам €67. Без обяснения, без разпит.</p>
-          <p>Мога да си го позволя, щото знам к'во съм написал вътре.</p>
+          <p>Ако нищо не помръдне — пишеш ми. Сядаме двамата на профила ти и намираме къде се е запънало. Понякога е една дребна грешка.</p>
+          <p>Ако и след това нищо — връщам ти €67-те. Точка.</p>
+          <p>Толкова съм сигурен в това, което съм написал.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="bonus">
+          <h2>БОНУСЪТ.</h2>
+          <p>Минеш ли всички стъпки — истински, не на прескочи — пишеш ми „ГОТОВО“.</p>
+          <p>Преглеждам лично профила ти и получаваш 30 минути консултация с мен: какво си пропуснал, какво да стегнеш, и какво идва след профила — сайт, реклама, следващото ниво.</p>
+          <p>Не е услугата за €597. Но е окото, което я правеше.</p>
         </div>
       </section>
 
       <section>
         <div class="offer">
           <p class="big">€67. Еднократно.</p>
-          <p>PDF. Седемте стъпки, чеклистът за всеки месец, и главата „Ако нещо се счупи“. Готов е. Пращам ти го до един час, не утре.</p>
+          <p>PDF: седемте стъпки, чеклистът за всеки месец и главата „Ако нещо се счупи“. Готов е.</p>
+          <p>Платиш ли — до един час наръчникът е при теб, на Viber, лично от мен. Не утре. До един час.</p>
           <p>Защо толкова евтино, като е част от пакет за €597? Защото затворих. Нямам какво да пазя вече — освен думата си:</p>
           <p><strong>В полунощ вратата се затваря.</strong></p>
           <div class="cta" data-cta>
-            <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>
-            <a class="btn btn-outline" href="tel:+359886516012">ОБАДИ СЕ: 088 651 6012</a>
-            <p class="paynote">Плащане: Изипей &middot; Revolut &middot; банков превод. Получаваш го до един час, лично от мен.</p>
+            <a class="btn btn-solid" href="https://buy.stripe.com/aFabJ38bu6QAbQM9Br1oI07">ПЛАТИ С КАРТА — €67 &rarr;</a>
+            <a class="btn btn-outline" href="viber://chat?number=%2B359886516012">ДРУГ НАЧИН НА ПЛАЩАНЕ? ПИШИ МИ &rarr;</a>
+            <p class="paynote">С карта — през бутона, веднага. Изипей &middot; Revolut &middot; банков превод — пиши ми на Viber. Наръчникът идва лично от мен, на Viber, до един час.</p>
           </div>
         </div>
       </section>
@@ -567,7 +590,7 @@
 
   <!-- Sticky mobile CTA: revealed by script past the hero, removed after DEADLINE. -->
   <div class="stickybar" id="stickybar" hidden>
-    <a class="btn btn-solid" href="viber://chat?number=%2B359886516012">ПИШИ МИ „НАРЪЧНИК“ &rarr;</a>
+    <a class="btn btn-solid" href="https://buy.stripe.com/aFabJ38bu6QAbQM9Br1oI07">ПЛАТИ С КАРТА — €67</a>
   </div>
 
   <script>
